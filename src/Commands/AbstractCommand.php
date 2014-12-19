@@ -14,27 +14,62 @@
 
 namespace Starbs\Console\Commands;
 
-use Proton\Application;
+use Orno\Di\ContainerInterface;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
 abstract class AbstractCommand extends Command
 {
-    protected $app;
-    protected $input;
-    protected $output;
+    /**
+     * The command name.
+     *
+     * This should be overwritten by the extending class.
+     *
+     * @var string
+     */
     protected $name;
+
+    /**
+     * The command description.
+     *
+     * This should be overwritten by the extending class.
+     *
+     * @var string
+     */
     protected $description;
+
+    /**
+     * The container instance.
+     *
+     * This should be overwritten by the extending class.
+     *
+     * @var string
+     */
+    protected $container;
+
+    /**
+     * The console input instance.
+     *
+     * @var \Symfony\Component\Console\Input\InputInterface
+     */
+    protected $input;
+
+    /**
+     * The console output instance.
+     *
+     * @var \Symfony\Component\Console\Output\OutputInterface
+     */
+    protected $output;
 
     /**
      * Create a new command instance.
      *
      * @return void
      */
-    public function __construct(Application $app)
+    public function __construct(ContainerInterface $container)
     {
-        $this->app = $app;
+        $this->container = $container;
 
         parent::__construct($this->name);
 
