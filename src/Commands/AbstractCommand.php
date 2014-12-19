@@ -14,7 +14,7 @@
 
 namespace Starbs\Console\Commands;
 
-use Orno\Di\ContainerInterface;
+use Orno\Di\Container;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
@@ -67,7 +67,7 @@ abstract class AbstractCommand extends Command
      *
      * @return void
      */
-    public function __construct(ContainerInterface $container)
+    public function __construct(Container $container)
     {
         $this->container = $container;
 

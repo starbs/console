@@ -14,7 +14,7 @@
 
 namespace Starbs\Console;
 
-use Orno\Di\ContainerInterface;
+use Orno\Di\Container;
 use Symfony\Component\Console\Application;
 
 abstract class AbstractApplication extends Application
@@ -40,18 +40,18 @@ abstract class AbstractApplication extends Application
     /**
      * The container instance.
      *
-     * @var \Orno\Di\ContainerInterface
+     * @var \Orno\Di\Container
      */
     protected $container;
 
     /**
      * Create a new console application instance.
      *
-     * @param \Orno\Di\ContainerInterface $container
+     * @param \Orno\Di\Container $container
      *
      * @return void
      */
-    public function __construct(ContainerInterface $container)
+    public function __construct(Container $container)
     {
         $this->container = $container;
 
