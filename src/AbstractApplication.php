@@ -68,8 +68,5 @@ abstract class AbstractApplication extends Application
      *
      * @return void
      */
-    abstract public function setup()
-    {
-        //
-    }
+    abstract protected function setup();
 }
