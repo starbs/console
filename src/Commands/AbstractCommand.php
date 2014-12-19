@@ -110,5 +110,5 @@ abstract class AbstractCommand extends Command
      *
      * @return int
      */
-    protected abstract function fire();
+    abstract protected function fire();
 }
