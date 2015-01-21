@@ -16,6 +16,11 @@ use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
+/**
+ * This is the abstract command class.
+ *
+ * @author Graham Campbell <graham@mineuk.com>
+ */
 abstract class AbstractCommand extends Command
 {
     /**

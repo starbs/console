@@ -14,6 +14,11 @@ namespace Starbs\Console;
 use Orno\Di\ContainerInterface;
 use Symfony\Component\Console\Application;
 
+/**
+ * This is the abstract application class.
+ *
+ * @author Graham Campbell <graham@mineuk.com>
+ */
 abstract class AbstractApplication extends Application
 {
     /**
